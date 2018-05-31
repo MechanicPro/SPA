@@ -4,11 +4,11 @@
         Welcome to {{ title }}!
     </h1>
 </div>
-<show (click)="showPhoto('')" [url]="urlPhoto"></show>
+<show id="loadPhoto" (click)="showPhoto('')" [url]="urlPhoto"></show>
 <ul *ngIf="hide">
     <li *ngFor="let photo of photos">
         <h2><b>{{photo.id}} . </b> {{photo.title}}</h2>
-        <img (click)="showPhoto(photo.url)" src="{{photo.thumbnailUrl}}">
+        <img id="loadPhoto" (click)="showPhoto(photo.url)" src="{{photo.thumbnailUrl}}">
 
     </li>
 </ul>
